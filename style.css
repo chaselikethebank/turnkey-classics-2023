@@ -1,0 +1,192 @@
+:root {
+  --bright: var(greenyellow);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.2fr 3.6fr 0.2fr;
+  grid-template-rows: 0.2fr 3.6fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "hero hero hero"
+    "sidebar main ads"
+    "footer footer footer";
+}
+
+.hero {
+  grid-area: hero;
+  background: bright;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.big-image {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("./assets/OverHero.jpg");
+  object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -100px;
+    left: 0;
+    background-color: rgb(255, 255, 255, .25);
+    color: rgb(33, 33, 33);
+    font-size: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.footer {
+  grid-area: footer;
+  background: rgb(47, 0, 255);
+  height: 35vh;
+  color: whitesmoke;
+}
+
+.TKC-logo {
+  z-index: 2;
+  height: 10vh;
+  display: flex;
+  padding: 10px 10px 10px 10px;
+}
+
+nav {
+  display: flex;
+  background-color: #ffffff;
+  margin-right: auto;
+
+  justify-content: right;
+  top: 0;
+  padding: 22px 10px 10px 10px;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+
+.nav-wrapper {
+  display: flex;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px 20px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: whitesmoke;
+}
+
+.main {
+  grid-area: main;
+  background-color: white;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  grid-gap: 1em;
+  height: 80%vh;
+}
+
+.ads {
+  grid-area: ads;
+  background-color: whitesmoke;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  /* color: var(--heliotrope); */
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/* For presentation only, no need to copy the code below */
+
+.container * {
+  border: 0px solid rgb(0, 0, 0);
+  position: relative;
+}
+
+.container *:after {
+  /* content: attr(class); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+main > div {
+  /* background-color: greenyellow; */
+  /* padding: 0.5em; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+}
+
+.section {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  margin-top: 10px
+  
+}
+
+.craft{
+    display: flex;
+    justify-content: center;
+
+}
+
+.card,
+.copy {
+    display: flex;
+    background-color: rgb(255, 145, 0);
+    width: 50%;
+    justify-content: center;
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    margin: -40px, 10px, 10px, 10px;
+}
+
+
