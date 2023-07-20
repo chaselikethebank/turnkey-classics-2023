@@ -209,7 +209,7 @@ nav a {
   height: 100vh;
 }
 .more-service{
-  background-image: url("./assets/porche-overhead.png");
+  background-image: url("./assets/walking.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0;
@@ -237,11 +237,26 @@ nav a {
   -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
   -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
   box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
-  padding: 15%;
+  padding: 10%;
   background-color: rgb(217, 255, 0, 1);
   height: 50%;
   max-height: 80vh;
   min-height: 40vh;
+}
+
+.def-cards-service {
+  box-sizing: border-box;
+  border: 2px solid #000000; /* Inner border style for the card content */
+  border-radius: 8px; /* Inner border radius for the card content */
+  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  padding: 0% 5% 6% 5%;
+  background-color: rgb(217, 255, 0, 1);
+  height: 80%;
+  max-height: 90vh;
+  min-height: 40vh;
+  font-size: 15rem
 }
 
 .def-cards-craft {
@@ -364,7 +379,7 @@ main > div {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -402,6 +417,11 @@ main > div {
   /* margin: -10px, 10px, 10px, 10px; */
 }
 
+@media screen and (min-width: 1200px) {
+  .service-mission {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .overlay {
     /* white-space: nowrap;  */
@@ -451,7 +471,15 @@ main > div {
 
   }
 
-  .def-cards-craft {
+  .def-cards {
     /* box-sizing: border-box; */
+    position: relative;
+    top: -180px;
+  }
+
+  .def-cards-service {
+    /* box-sizing: border-box; */
+    position: relative;
+    top: -180px;
   }
 }
