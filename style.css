@@ -40,14 +40,24 @@
   object-fit: cover;
 }
 
+.big-image-overhead {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("./assets/overhead.jpg");
+  object-fit: cover;
+}
+
 .overlay {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: -100px;
+  /* top: -100px; */
   left: 0;
   /* top: 0; */
-  background-color: rgb(255, 255, 255, 0.42);
+  background-color: rgb(255, 255, 255, 0);
   color: rgb(33, 33, 33);
   font-size: 15vw;
   display: flex;
@@ -56,11 +66,41 @@
   flex-direction: column;
 }
 
+.overlay-relative {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* left: -100px; */
+  /* left: 0; */
+  /* top: 0; */
+  background-color: rgb(255, 255, 255, 0);
+  color: rgb(33, 33, 33);
+  font-size: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
 .footer {
   grid-area: footer;
   background: whitesmoke;
   height: 15vh;
-  color: whitesmoke;
+  width: 100vw;
+
+  color: rgb(0, 0, 0);
+  display: flex;
+  margin: auto;
+  font-size: 2vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex {
@@ -74,19 +114,35 @@
 
 .TKC-logo {
   z-index: 2;
-  height: 10vh;
+  height: 20vh;
   display: flex;
-  padding: 10px 10px 10px 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+.overhead {
+  height: 50vh;
+  /* display: flex; */
+  justify-content: left;
+  align-items: center;
+  margin: auto;
+}
+
+.text-p {
+  width: 50vw;
+  font-size: 3vh;
+  font-weight: 700;
+  padding: 5% 0;
+}
+.no-overlap{
+  /* word-break: break-all; */
+  white-space: pre-wrap;
 }
 
 nav {
-  display: flex;
-  background-color: #ffffff;
-  margin-right: auto;
-
-  justify-content: right;
-  top: 0;
-  padding: 22px 10px 10px 10px;
+  
   z-index: 1;
   font-size: 1.5rem;
 }
@@ -97,7 +153,7 @@ nav {
 
 nav a {
   color: #13293d;
-  padding: 14px 20px 20px 20px;
+  /* padding: 14px 20px 20px 20px; */
   text-decoration: none;
   text-align: center;
 }
@@ -143,6 +199,8 @@ nav a {
   min-height: 40vh;
 }
 
+
+
 .def-cards-craft {
   /* box-sizing: border-box; */
   border: 2px solid #000000; /* Inner border style for the card content */
@@ -175,7 +233,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0.625rem;
+  margin: 0.625rem;
   /* color: var(--heliotrope); */
   font-weight: 700;
   line-height: 1.1;
