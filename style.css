@@ -19,6 +19,13 @@
     "footer footer footer";
 }
 
+#about,
+#service{
+  height: 100vh;
+}
+
+
+
 .hero {
   grid-area: hero;
   background: bright;
@@ -87,20 +94,38 @@
   flex-direction: column;
 }
 
-
-
 .footer {
   grid-area: footer;
   background: whitesmoke;
-  height: 15vh;
+  height: 50vh;
   width: 100vw;
-
   color: rgb(0, 0, 0);
   display: flex;
   margin: auto;
   font-size: 2vh;
   justify-content: center;
   align-items: center;
+  padding-left: 5%;
+  box-sizing: border-box;
+  line-height: 2;
+
+}
+
+.hard-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  /* padding: 5%; */
+}
+
+.porsch-icon {
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  justify-content:flex-start;
+
 }
 
 .flex {
@@ -109,7 +134,6 @@
   align-items: center;
   flex-direction: column;
   width: 80%;
-
 }
 
 .TKC-logo {
@@ -136,13 +160,12 @@
   font-weight: 700;
   padding: 5% 0;
 }
-.no-overlap{
+.no-overlap {
   /* word-break: break-all; */
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
 }
 
 nav {
-  
   z-index: 1;
   font-size: 1.5rem;
 }
@@ -173,6 +196,28 @@ nav a {
   height: 80%vh;
 }
 
+.more-about{
+  background-image: url("./assets/overhead.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  padding: 0;
+}
+
+#services {
+  height: 100vh;
+}
+.more-service{
+  background-image: url("./assets/porche-overhead.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  padding: 0;
+  height: 100vh;
+
+}
+
 .example {
   color: var(--light);
   font-size: small;
@@ -189,9 +234,9 @@ nav a {
   box-sizing: border-box;
   border: 2px solid #000000; /* Inner border style for the card content */
   border-radius: 8px; /* Inner border radius for the card content */
-  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
-  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
-  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
+  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
   padding: 15%;
   background-color: rgb(217, 255, 0, 1);
   height: 50%;
@@ -199,15 +244,13 @@ nav a {
   min-height: 40vh;
 }
 
-
-
 .def-cards-craft {
   /* box-sizing: border-box; */
   border: 2px solid #000000; /* Inner border style for the card content */
   border-radius: 8px; /* Inner border radius for the card content */
-  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
-  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
-  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
+  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
   padding: 4%;
   background-color: rgb(217, 255, 0, 1);
 }
@@ -215,10 +258,7 @@ nav a {
 h1 .def-cards {
   width: 50%;
   /* background-color: rgba(255, 145, 0, 0.8); */
-
-  
 }
-
 
 html,
 body,
@@ -240,6 +280,30 @@ h6 {
   text-align: center;
   white-space: nowrap;
   font-size: 2vw;
+}
+
+.wrap {
+  white-space: pre-wrap;
+  font-size: 2.14vw;
+}
+.span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.span-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.services {
+  width: 95%;
+  margin: auto;
+  display: flex;
+}
+
+.scale {
+  font-size: medium;
 }
 
 h2 {
@@ -313,7 +377,7 @@ main > div {
 }
 .section {
   display: flex;
-  
+
   /* margin: auto; */
   width: 100%;
   /* margin-top: 10px */
@@ -341,44 +405,53 @@ main > div {
 @media screen and (max-width: 768px) {
   .overlay {
     /* white-space: nowrap;  */
-    font-size: 15vw;
+    /* font-size: 15vw; */
     /* font-size: 3rem; */
     /* padding-top: 37%; */
     font-weight: 800;
+    height: 100%;
   }
 
-
-
-  .nav {
+  /* .nav {
     display: none;
-  }
-
+  } */
+  /* 
   .TKC-logo {
     display: none;
-  }
+  } */
 
   main > div {
-    font-size: 1.5rem;
-    height: 50vh;
+    font-size: 1rem;
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 95vh; */
   }
 
   .split,
   .copy {
     display: flex;
+    /* flex-direction: column; */
     /* background-color: var(--cardBG); */
-    width: 50%;
+    width: 90%;
     justify-content: center;
     height: 100%;
-    /* margin: auto; */
+    margin: auto;
     align-items: center;
     position: relative;
-    /* padding: 10px; */
-    /* margin: -40px 10px 10px 10px; */
+    margin: 5%;
+    top: 180px;
+
   }
 
   .def-cards-craft {
     /* box-sizing: border-box; */
-    
-    background-color: rgb(217, 255, 0, 1);
   }
 }
