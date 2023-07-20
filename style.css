@@ -19,6 +19,13 @@
     "footer footer footer";
 }
 
+#about,
+#service{
+  height: 100vh;
+}
+
+
+
 .hero {
   grid-area: hero;
   background: bright;
@@ -40,14 +47,24 @@
   object-fit: cover;
 }
 
+.big-image-overhead {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url("./assets/overhead.jpg");
+  object-fit: cover;
+}
+
 .overlay {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: -100px;
+  /* top: -100px; */
   left: 0;
   /* top: 0; */
-  background-color: rgb(255, 255, 255, 0.42);
+  background-color: rgb(255, 255, 255, 0);
   color: rgb(33, 33, 33);
   font-size: 15vw;
   display: flex;
@@ -56,11 +73,59 @@
   flex-direction: column;
 }
 
+.overlay-relative {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* left: -100px; */
+  /* left: 0; */
+  /* top: 0; */
+  background-color: rgb(255, 255, 255, 0);
+  color: rgb(33, 33, 33);
+  font-size: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   grid-area: footer;
   background: whitesmoke;
-  height: 15vh;
-  color: whitesmoke;
+  height: 50vh;
+  width: 100vw;
+  color: rgb(0, 0, 0);
+  display: flex;
+  margin: auto;
+  font-size: 2vh;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  box-sizing: border-box;
+  line-height: 2;
+
+}
+
+.hard-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  /* padding: 5%; */
+}
+
+.porsch-icon {
+  height: 50vh;
+  margin: auto;
+  display: flex;
+  justify-content:flex-start;
+
 }
 
 .flex {
@@ -69,24 +134,38 @@
   align-items: center;
   flex-direction: column;
   width: 80%;
-
 }
 
 .TKC-logo {
   z-index: 2;
-  height: 10vh;
+  height: 20vh;
   display: flex;
-  padding: 10px 10px 10px 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+.overhead {
+  height: 50vh;
+  /* display: flex; */
+  justify-content: left;
+  align-items: center;
+  margin: auto;
+}
+
+.text-p {
+  width: 50vw;
+  font-size: 3vh;
+  font-weight: 700;
+  padding: 5% 0;
+}
+.no-overlap {
+  /* word-break: break-all; */
+  /* white-space: pre-wrap; */
 }
 
 nav {
-  display: flex;
-  background-color: #ffffff;
-  margin-right: auto;
-
-  justify-content: right;
-  top: 0;
-  padding: 22px 10px 10px 10px;
   z-index: 1;
   font-size: 1.5rem;
 }
@@ -97,7 +176,7 @@ nav {
 
 nav a {
   color: #13293d;
-  padding: 14px 20px 20px 20px;
+  /* padding: 14px 20px 20px 20px; */
   text-decoration: none;
   text-align: center;
 }
@@ -117,6 +196,28 @@ nav a {
   height: 80%vh;
 }
 
+.more-about{
+  background-image: url("./assets/overhead.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  padding: 0;
+}
+
+#services {
+  height: 100vh;
+}
+.more-service{
+  background-image: url("./assets/porche-overhead.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  padding: 0;
+  height: 100vh;
+
+}
+
 .example {
   color: var(--light);
   font-size: small;
@@ -133,9 +234,9 @@ nav a {
   box-sizing: border-box;
   border: 2px solid #000000; /* Inner border style for the card content */
   border-radius: 8px; /* Inner border radius for the card content */
-  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
-  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
-  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
+  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
   padding: 15%;
   background-color: rgb(217, 255, 0, 1);
   height: 50%;
@@ -147,9 +248,9 @@ nav a {
   /* box-sizing: border-box; */
   border: 2px solid #000000; /* Inner border style for the card content */
   border-radius: 8px; /* Inner border radius for the card content */
-  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
-  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
-  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);  
+  -webkit-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
+  box-shadow: 4px 4px 0px 4px rgba(0, 0, 0, 1);
   padding: 4%;
   background-color: rgb(217, 255, 0, 1);
 }
@@ -157,10 +258,7 @@ nav a {
 h1 .def-cards {
   width: 50%;
   /* background-color: rgba(255, 145, 0, 0.8); */
-
-  
 }
-
 
 html,
 body,
@@ -175,13 +273,37 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0.625rem;
+  margin: 0.625rem;
   /* color: var(--heliotrope); */
   font-weight: 700;
   line-height: 1.1;
   text-align: center;
   white-space: nowrap;
   font-size: 2vw;
+}
+
+.wrap {
+  white-space: pre-wrap;
+  font-size: 2.14vw;
+}
+.span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.span-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.services {
+  width: 95%;
+  margin: auto;
+  display: flex;
+}
+
+.scale {
+  font-size: medium;
 }
 
 h2 {
@@ -255,7 +377,7 @@ main > div {
 }
 .section {
   display: flex;
-  
+
   /* margin: auto; */
   width: 100%;
   /* margin-top: 10px */
@@ -283,44 +405,53 @@ main > div {
 @media screen and (max-width: 768px) {
   .overlay {
     /* white-space: nowrap;  */
-    font-size: 15vw;
+    /* font-size: 15vw; */
     /* font-size: 3rem; */
     /* padding-top: 37%; */
     font-weight: 800;
+    height: 100%;
   }
 
-
-
-  .nav {
+  /* .nav {
     display: none;
-  }
-
+  } */
+  /* 
   .TKC-logo {
     display: none;
-  }
+  } */
 
   main > div {
-    font-size: 1.5rem;
-    height: 50vh;
+    font-size: 1rem;
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 95vh; */
   }
 
   .split,
   .copy {
     display: flex;
+    /* flex-direction: column; */
     /* background-color: var(--cardBG); */
-    width: 50%;
+    width: 90%;
     justify-content: center;
     height: 100%;
-    /* margin: auto; */
+    margin: auto;
     align-items: center;
     position: relative;
-    /* padding: 10px; */
-    /* margin: -40px 10px 10px 10px; */
+    margin: 5%;
+    top: 180px;
+
   }
 
   .def-cards-craft {
     /* box-sizing: border-box; */
-    
-    background-color: rgb(217, 255, 0, 1);
   }
 }
