@@ -15,7 +15,7 @@
   grid-auto-flow: row;
   grid-template-areas:
     "hero hero hero"
-    "sidebar main ads"
+    "main main main"
     "footer footer footer";
 }
 
@@ -68,7 +68,7 @@
   /* top: 0; */
   background-color: rgb(255, 255, 255, 0);
   color: rgb(33, 33, 33);
-  font-size: 15vw;
+  font-size: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +99,7 @@
 .footer {
   grid-area: footer;
   background: whitesmoke;
-  min-height: 45vh;
+  min-height: 33vh;
   width: 100vw;
   color: rgb(0, 0, 0);
   display: flex;
@@ -138,14 +138,25 @@
   
 }
 
-.TKC-logo {
+.TKC-logo-hero {
   z-index: 2;
-  height: 20vh;
+  height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
+}
+
+
+.TKC-logo-foot {
+  z-index: 2;
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 2%;
 }
 
 .overhead {
@@ -195,7 +206,6 @@ nav a {
   display: grid;
   grid-template-columns: repeat(auto-fit);
   grid-gap: 1em;
-  height: 80%vh;
 }
 
 .more-about{
@@ -222,7 +232,7 @@ nav a {
 
 .example {
   color: var(--light);
-  font-size: small;
+  font-size: 1.5vh;
   width: 80%;
   margin: auto;
 }
@@ -259,11 +269,10 @@ nav a {
   -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
   -moz-box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
-  padding: 0% 6% 6% 5%;
+  padding: 6% 6% 6% 6%;
   background-color: rgb(217, 255, 0, 1);
   height: 80%;
   max-height: 90vh;
-  min-height: 40vh;
   font-size: 15rem
 }
 
@@ -276,11 +285,11 @@ nav a {
   -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
   -moz-box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
-  padding: 0% 6% 6% 5%;
+  padding: 15% 15% 4% 15%;
   background-color: rgb(217, 255, 0, 1);
   height: 100%;
   max-height: 40vh;
-  min-height: 25vh;
+  min-height: 20vh;
   font-size: 15rem
 }
 
@@ -313,6 +322,8 @@ body,
   margin: 0;
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden; 
+
 }
 
 h3,
@@ -325,12 +336,16 @@ h6 {
   line-height: 1.1;
   text-align: center;
   white-space: nowrap;
-  font-size: 1vw;
+  font-size: 1.5vh;
 }
 
+p {
+  font-size: 1.7vh;
+
+}
 .wrap {
   white-space: pre-wrap;
-  font-size: 2.14vw;
+  font-size: 2.14vh;
 }
 .span {
   display: flex;
@@ -357,7 +372,7 @@ h6 {
 }
 
 .scale {
-  font-size: medium;
+  font-size: 1.8vh;
 }
 
 h2 {
@@ -368,7 +383,7 @@ h2 {
   line-height: 1.1;
   text-align: center;
   white-space: nowrap;
-  font-size: 4vw;
+  font-size: 3.5vh;
 }
 
 h2 strong {
@@ -382,7 +397,7 @@ h1 {
   line-height: 1.1;
   text-align: center;
   white-space: nowrap;
-  font-size: 6vw;
+  font-size: 4vh;
 }
 
 /* For presentation only, no need to copy the code below */
@@ -428,6 +443,7 @@ main > div {
 .noun-verb {
   font-style: italic;
   font-weight: 600;
+  font-size: 1.7vh;
 }
 .section {
   display: flex;
@@ -462,15 +478,13 @@ main > div {
     top: 10px;
   }
   
-  .service-mission {
-    display: none;
-  }
 
   .footer {
 
     height: 25vh;
   
   }
+
 
 }
 @media screen and (max-width: 768px) {
